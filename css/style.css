@@ -1,0 +1,132 @@
+@charset "utf-8"; @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,500,700&display=swap'); body { font-family:'Noto Sans KR',sans-serif; color:#2b2b2b;  } 
+
+/* 상단 배경 텍스트 */
+.background-text { position: fixed; top: 20vw; left: 0; transform: translateX(-40%) translateY(-50%); white-space: nowrap; font-size: clamp(12rem, 15vw, 15rem); color: rgba(190, 190, 190, 0.1); font-family: Arial, sans-serif; animation: moveText 40s linear infinite; font-weight: 700; z-index: 1; transition: opacity 1s ease; pointer-events: none; } 
+
+@media screen and (max-width:600px){
+    .background-text { display: none; } 
+    }
+   
+@keyframes moveText { 
+    from { left: 100%; } 
+    to { left: -100%; } 
+    }
+
+    
+ p, h1, h2 { position: relative; z-index: 2; } 
+
+ /* 하단 배경 텍스트 */
+ .background-text1 { position: fixed; top: 40%; left: 20%; z-index: -1; font-size: clamp(3rem, 9vw, 9rem); color: transparent; -webkit-text-stroke: 2px rgba(146, 152, 219, 0.2);
+ pointer-events: none; opacity: 0; transition: opacity 0.5s ease-in-out;  font-weight: 700; line-height: 100%; white-space: nowrap;} 
+
+
+/* header */
+/* header { position:fixed; top:0; left:0; bottom:0; width:100%; height:60px; z-index:100; background-color:rgba(255,255,255,0.5); } 
+header>.container>nav { top:0; width:100%; height:60px; } 
+header>.container>nav>.gnb>li { float:left; width:200px; } 
+header>.container>nav>.gnb>li>a { display:block; height:60px; line-height:60px; font-size: clamp(1.2rem, 1.2vw, 1.2rem); font-weight:700; text-align:center; transition:all 0.4s; } 
+header>.container>nav>.gnb>li:hover>a,header>.container>nav>.gnb>li>a:focus,header>.container>nav>.gnb>li.on>a { color:#ffffff; } */
+
+/* header는 그대로 사용 */
+
+header > .container > nav {position: fixed; display: flex; justify-content: center; align-items: center; height: 60px; width: 100%; background-color:rgba(255,255,255,0.5);}
+header > .container > nav > .gnb {display: flex; gap: 20px; list-style: none; padding: 0; margin: 0; }
+header > .container > nav > .gnb > li { width: auto;}
+header > .container > nav > .gnb > li > a {display: block; height: 60px; line-height: 60px; font-size: clamp(1.2rem, 1.2vw, 1.2rem); font-weight: 700; text-align: center; transition: all 0.4s; padding: 0 30px;}
+ 
+
+/* 1 */
+#Overview { min-height: 100vh; /* 화면 높이만큼 최소 확보 */
+    background-image: url(../images/toner_back1.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%; /* 여백 유지를 위해 추가 */
+    box-sizing: border-box;} 
+#Overview>.title {  padding: 20% 10% 10% 10%; color: #fff}
+#Overview>.title>p { font-weight:700; font-size: clamp(2.5rem, 3vw, 3rem); color:#ffffff;}
+#Overview>.title>li:nth-child(2){padding-top: 10px;line-height: 180%; font-size: clamp(1.5rem, 1.5vw, 1.5rem); color: #a0ce9b;}
+#Overview>.title>li:nth-child(3){padding-top: 10px;line-height: 180%; font-size: clamp(1.2rem, 1.5vw, 1.5rem); font-weight: 300;}
+
+/* 2 */
+#toner2 { min-height: 100vh; /* 화면 높이만큼 최소 확보 */
+    background-image: url(../images/toner_back2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%; /* 여백 유지를 위해 추가 */
+    box-sizing: border-box;} 
+
+#toner2>.title>p { font-weight:700; font-size: clamp(2.5rem, 3vw, 3rem); color:#295325;}    
+#toner2>.title {  padding: 10% 30% 10% 10%;}
+
+#toner2>.title>li:nth-child(2){padding-top: 10px;line-height: 180%; font-size: clamp(1.5rem, 1.5vw, 1.5rem); color: #597257;}
+#toner2>.title>li:nth-child(3){padding-top: 10px;line-height: 180%; font-size: clamp(1.2rem, 1.5vw, 1.5rem); font-weight: 300;}
+
+/* 3 */
+#toner3 { min-height: 100vh; /* 화면 높이만큼 최소 확보 */
+    background-image: url(../images/toner_back2.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%; /* 여백 유지를 위해 추가 */
+    box-sizing: border-box;} 
+
+#toner3>.title>p { font-weight:700; font-size: clamp(2.5rem, 3vw, 3rem); color:#fff;}    
+#toner3>.title {  padding: 10%;}
+
+#toner3>.title>li:nth-child(2){padding-top: 10px;line-height: 180%; font-size: clamp(1.5rem, 1.5vw, 1.5rem); color: #ffffff;}
+#toner3>.title>li:nth-child(3){padding-top: 10px;line-height: 180%; font-size: clamp(1.2rem, 1.5vw, 1.5rem); font-weight: 300;}
+
+/* 4 */
+#toner4 {display: flex;justify-content: center; gap: 40px; flex-wrap: wrap; padding: 80px 20px; text-align: center;}  
+#toner4 ul {width: 300px; list-style: none; padding: 0; margin: 0;}  
+#toner4 ul li img {width: 100%; height: auto; margin-bottom: 10px;}  
+#toner4 ul li:nth-child(2) {font-weight: bold; font-size: 2rem; margin-bottom: 8px;}  
+#toner4 ul li:nth-child(3) {font-size: 0.95rem; line-height: 1.5;}  
+
+/* 5 */
+#toner5 { min-height: 100vh; /* 화면 높이만큼 최소 확보 */
+    background-image: url(../images/toner_back4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 40% 5% 5%;
+    box-sizing: border-box;} 
+
+#toner5>.title>p { font-weight:700; font-size: clamp(2.5rem, 3vw, 3rem);}    
+#toner5>.title {  padding: 10%;}
+
+#toner5>.title>li:nth-child(2){padding-top: 10px;line-height: 180%; font-size: clamp(1.5rem, 1.5vw, 1.5rem);}
+#toner5>.title>li:nth-child(3){padding-top: 10px;line-height: 180%; font-size: clamp(1.2rem, 1.5vw, 1.5rem); font-weight: 300;}    
+
+
+/* 7. Contact-Us */
+#Contact-Us {  height: 700px; display: flex; justify-content: center; align-items: center;}
+#Contact-Us>.title {color: #000; padding: 0 10% 15% 0;}
+#Contact-Us>.title>ul>p { font-size: clamp(2.5rem, 3vw, 3rem); font-weight:500; color:#7576a0; letter-spacing:1px; } 
+
+
+/* footer */
+footer {  height:160px; background-color:#7576a0; padding: 3% 0 0 5%;} 
+footer>address { font-size:14px; font-weight:300; color:#fff; line-height:1.6; text-align:left; } 
