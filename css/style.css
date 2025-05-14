@@ -113,6 +113,11 @@ header>.container>nav>.gnb>li>a {display: block; height: 60px; line-height: 60px
 #toner5 { min-height: 100vh; background-image: url(../images/toner_back4.jpg);background-repeat: no-repeat;background-size: cover; background-position: center; margin: 0 auto; display: flex; justify-content: center; align-items: center; padding: 5% 40% 5% 5%; box-sizing: border-box;} 
 @media (max-width: 768px) {
     #toner5 { padding: 5%}
+}
+#toner5.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
 }    
 
 #toner5>.title>p { font-weight:700; font-size: clamp(2rem, 3vw, 3rem);}    
@@ -124,7 +129,7 @@ header>.container>nav>.gnb>li>a {display: block; height: 60px; line-height: 60px
 /* toner 6 */
 
 /* 포인트 섹션 스타일 */
-#toner6 { min-height: 100vh; background: linear-gradient(135deg, #e9f0ff, #ffffff); text-align: center; font-size: 2rem; font-weight: 700; padding: 5% 20% 3% 20%; }
+#toner6 { background: linear-gradient(135deg, #e9f0ff, #ffffff); text-align: center; font-size: 2rem; font-weight: 700; padding: 5% 20% 3% 20%; }
 @media (max-width: 768px) {
     #toner6 { padding: 15% 20% 3% 20%; }
 }

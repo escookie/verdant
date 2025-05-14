@@ -15,6 +15,7 @@ $(function(){
   $('section').each(function(idx){
     arrTopVal[idx] = $(this).offset().top;
   });
+  console.log(arrTopVal);
 
   //header
   $mnu.on('click',function(event){
