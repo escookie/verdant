@@ -15,8 +15,10 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('section').forEach(function(section, idx) {
     const rect = section.getBoundingClientRect();
     arrTopVal[idx] = rect.top + window.scrollY;
+
+    console.log(`section ${idx} 위치:`, arrTopVal[idx]);
   });
-  console.log(arrTopVal);
+
 
   // 메뉴 클릭 시
   mnu.forEach(function(menuItem, idx) {
