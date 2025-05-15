@@ -103,7 +103,7 @@ header>.container>nav>.gnb>li>a {display: block; height: 60px; line-height: 60px
 }
 
 /* toner 4 */
-#toner4 {min-height: 100vh; display: flex;justify-content: center; gap: 40px; flex-wrap: wrap; padding: 80px 20px; text-align: center;}  
+#toner4 { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; flex-wrap: wrap; padding: 80px 20px; text-align: center;}  
 #toner4 ul {width: 300px; list-style: none; padding: 0; margin: 0;}  
 #toner4 ul li img {width: 100%; height: auto; margin-bottom: 10px;}  
 #toner4 ul li:nth-child(2) {font-weight: bold; font-size: clamp(2rem, 2vw, 1.5rem); margin-bottom: 8px;}  
