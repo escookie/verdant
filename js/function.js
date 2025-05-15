@@ -11,9 +11,10 @@ document.addEventListener('DOMContentLoaded', function() {
   let nowIdx = 0;
   const arrTopVal = [];
 
-  // 각 section 요소의 offsetTop 값을 배열에 저장
+  // 각 section 요소의 위치값을 getBoundingClientRect로 계산해서 저장
   document.querySelectorAll('section').forEach(function(section, idx) {
-    arrTopVal[idx] = section.offsetTop;
+    const rect = section.getBoundingClientRect();
+    arrTopVal[idx] = rect.top + window.scrollY;
   });
   console.log(arrTopVal);
 
@@ -32,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       });
 
-      // 스크롤 애니메이션 (부드럽게 스크롤)
+      // 부드러운 스크롤 이동
       window.scrollTo({
         top: arrTopVal[nowIdx],
         behavior: 'smooth'
